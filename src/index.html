@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ITPROFIT</title>
+		<link rel="stylesheet" href="./styles/main.css" />
+	</head>
+	<body>
+		<div class="app">
+			<!-- Contact Form -->
+			<form class="form" id="contactForm">
+				<label class="form__label" for="name">Имя<span>&ast;</span></label>
+				<input
+					required
+					autofocus
+					autocomplete="false"
+					class="form__input"
+					type="text"
+					id="name"
+					name="name"
+					placeholder="Введите ваше имя..."
+				/>
+				<span class="form__error-message" id="name-error"></span>
+
+				<label class="form__label" for="email">E-mail<span>&ast;</span></label>
+				<input
+					required
+					autocomplete="false"
+					class="form__input"
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Введите ваш E-mail..."
+				/>
+				<span class="form__error-message" id="email-error"></span>
+
+				<label class="form__label" for="phone">Телефон<span>&ast;</span></label>
+				<input
+					required
+					autocomplete="false"
+					class="form__input"
+					type="text"
+					id="phone"
+					name="phone"
+				/>
+				<span class="form__error-message" id="phone-error"></span>
+
+				<label class="form__label" for="message"
+					>Сообщение<span>&ast;</span></label
+				>
+				<textarea
+					required
+					class="form__textarea"
+					id="message"
+					name="message"
+				></textarea>
+				<span class="form__error-message" id="message-error"></span>
+
+				<button class="form__button" type="submit">Отправить</button>
+				<div class="loader" id="loader"></div>
+			</form>
+			<!-- Button to open modal -->
+			<button class="button" type="button" id="open-modal">
+				Открыть модальное окно
+			</button>
+			<!-- Modal window -->
+			<div class="modal" id="modal">
+				<div class="modal__content">
+					<span class="modal__close">&times;</span>
+					<p class="modal__message" id="modal-message">Сообщение</p>
+				</div>
+			</div>
+		</div>
+		<script src="./bundle.js"></script>
+	</body>
+</html>
